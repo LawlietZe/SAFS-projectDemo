@@ -3,132 +3,146 @@
 <head>
 	<meta charset="utf-8">
 	<title>demo</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<style type="text/css">
-		*{
-			padding: 0px;
-			margin: 0px;
+
+		body{
+			background-color: #3B3831;
 		}
 		.nav{
-			width: 250px;
-			height: 800px;
-			background-color: #3b3734;
-		}
-		.lev-1{
 			position: relative;
-			list-style: none;
-		}
-		.lev-1 a{
-			text-align: center;
-			display: inline-block;
-			width: 100%;
-			line-height: 33px;
-			list-style: none;
-			background-color: #514841;
+			top: 10px;
+			left: 10px;
+			width: 250px;
+			height: 600px;
+			background-color: #47423C;
 			text-decoration: none;
 			color: #ffc446;
+			border-radius: 10px;
+			border: 1px solid #343b43;
+			overflow: hidden;
 		}
-		.first{
-			line-height: 50px !important;
-			background-color: #3b3734 !important;
+		.list-1{
+			padding-top: 5px;
 		}
-		a:hover{
-			background-color: #6b6754 !important;
+		.list li a{
+			display: block;
+			text-decoration: none;
+			color: #ffc446;
+			line-height: 33px;
+			text-align: center;
 		}
-		.first
-		.lev-2{
-			position: absolute;
-			left: 250px;
-			top: 90px;
-			width: 150px;
-			height: 200px;
+		.list .list-head{
+			line-height: 50px;
+			background-color: #47423C;
+			border-bottom: 2px solid black;
+			border-right: 1px solid black;			
+		}
+		.list .list-head:hover{
 			background-color: #3b3734;
-			list-style: none;
-			margin-top: 0px;
 		}
-		.lev-2 a{
-			float: left;
-			text-align: center;
-			display: inline-block;
-			width: 100%;
-			line-height: 33px;
-			list-style: none;
+		.list > li {
 			background-color: #514841;
-			text-decoration: none;
-			color: #ffc446;
+			border-bottom: 1px solid #000;
 		}
-		 /* first list button style */ 
-		.first{
-			display: inline-block; 
-			zoom: 1;
-			*display: inline; 
-			vertical-align: baseline; 
-			margin: 0 2px; 
-			outline: none; 
-			cursor: pointer; 
-			text-align: center; 
-			text-decoration: none; 
-			font: 14px/100% Arial, Helvetica, sans-serif; 
-			padding: 0em; 
-			text-shadow: 0 1px 1px rgba(0,0,0,.3); 
-			-webkit-border-radius: .5em; 
-			-moz-border-radius: .5em; 
-			border-radius: .5em; 
-			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
-			-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
-			box-shadow: 0 1px 2px rgba(0,0,0,.2); 
-		}
-		.first:hover{
-			background-color: #3b3734 !important;
-		}
-		ul li{
-			border-bottom: 4px solid #3b3734;
-		}
-		.lev-2 a{
-			border-bottom: 4px solid #3b3734;
+		.list > li a:hover{
+			background-color: #6b6754;
 		}
 		.lev-2{
+			border-top: 1px solid #FFC446;
 			font-size: 13px;
-			list-style: none;
-			padding: 10px;
-			padding-top: 0px;
-			height: 0px;
+		}
+		.lev-2 li{
+			border-bottom: 1px solid black;
+		}
+		.shadow{
+			position: relative;
+			top: 10px;
+			left: 10px;
 		}
 	</style>
 </head>
 <body>
-	<div class="nav">
-		<ul class="lev-1">
-			<li><a href="#" class="first">基金数据</a></li>
-			<li class="list">
-				<a href="#">基金仓库
-					<ul class="lev-2" style="display: none;">
+	<div class="nav scrollbar">
+		<ul class="list list-1">
+			<li><a href="#" class="list-head">基金数据</a></li>
+			<li>
+				<a href="#" class="fund-bank">基金仓库
+					<ul class="lev-2 fund-bank-drop" style="display: none;">
 						<li><a href="#" >基金列表</a></li>
 						<li><a href="#" >统计数据</a></li>
 						<li><a href="#" >信息配置</a></li>
 					</ul>
 				</a>
+			</li>
+			<li>
+				<a href="#" class="fund-survey">基金概况</a>
+				 <ul class="lev-2 fund-drop-survey" style="display: none;">
+				 		<li><a href="#" >业绩表现</a></li>
+						<li><a href="#" >投资组合</a></li>
+						<li><a href="#" >交易历史</a></li>
+						<li><a href="#" >基金公告</a></li>
+						<li><a href="#" >申赎记录</a></li>
+						<li><a href="#" >投资者资料</a></li>
+						<li><a href="#" >基本资料</a></li>
+				 </ul>
+			</li>	
 			</li>						
 		</ul>
-		<ul class="lev-1">
-			<li><a href="#" class="first">估值核算</a></li>
+		<ul class="list list-2">
+			<li><a href="#" class="list-head">估值核算</a></li>
 			<li><a href="#">基金估值</a></li>
 			<li><a href="#">基金估值</a></li>
 			<li><a href="#">通用工具</a></li>
 			<li><a href="#">估值管理</a></li>
 			<li><a href="#">基金报表</a></li>		
-		</ul>				
+		</ul>
+		<ul class="list list-3">
+			<li><a href="#" class="list-head">份额登记</a></li>
+			<li><a href="#">线下TA</a></li>
+			<li><a href="#">线上TA</a></li>	
+		</ul>
+<!-- 		<ul class="list list-4">
+			<li><a href="#" class="list-head">投资分析</a></li>
+			<li><a href="#">收益归因</a></li>
+			<li><a href="#">分析报告</a></li>	
+		</ul>
+		<ul class="list list-5">
+			<li><a href="#" class="list-head">市场数据</a></li>
+			<li><a href="#">股票市场</a></li>
+			<li><a href="#">固定收益市场</a></li>	
+			<li><a href="#">期货市场</a></li>	
+			<li><a href="#">宏观经济</a></li>
+			<li><a href="#">证券信息</a></li>				
+		</ul>	
+		<ul class="list list-6">
+			<li><a href="#" class="list-head">交易管理</a></li>
+			<li><a href="#">交易平台</a></li>			
+		</ul>	 -->										
+	</div>
+	<div class="shadow">
+		<img src="w_shadow.png" width="250px">
 	</div>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			// 实现下拉列表功能
-			$(".list").hover(
+			$(".fund-bank").mouseenter(
 				function () {
-				$('.lev-2').filter(':not(:animated)').slideDown(50);
+				$('.fund-bank-drop').filter(':not(:animated)').slideDown(150);
 			});
-			$(".list").mouseout(			
+			$(".fund-bank-drop").mouseleave(			
 				function () {
-				$('.lev-2').filter(':not(:animated)').slideUp(100);
+				$('.fund-bank-drop').filter(':not(:animated)').slideUp(200);
+			});
+			//基金概况
+			$(".fund-survey").mouseenter(
+				function () {
+				$('.fund-drop-survey').filter(':not(:animated)').slideDown(150);
+			});
+			$(".fund-drop-survey").mouseleave(			
+				function () {
+				$('.fund-drop-survey').filter(':not(:animated)').slideUp(200);
 			});
 		});
 	</script>
