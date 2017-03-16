@@ -14,14 +14,14 @@
 			top: 10px;
 			left: 10px;
 			width: 250px;
-			height: 600px;
-			background-color: #47423C;
+/* 			height: 600px;
+ */			background-color: #47423C;
 			text-decoration: none;
 			color: #ffc446;
 			border-radius: 10px;
 			border: 1px solid #343b43;
-			overflow: hidden;
-		}
+/* 			overflow: hidden;
+ */		}
 		.list-1{
 			padding-top: 5px;
 		}
@@ -68,11 +68,11 @@
 <!-- 			<li><a href="#" class="list-head">基金数据</a></li>
 -->			<li>
 				<a href="#" class="fund-bank list-head">基金仓库</a>
-					<ul class="lev-2 fund-bank-drop" style="display: none;">
-						<li><a href="#" >基金列表</a></li>
-						<li><a href="#" >统计数据</a></li>
-						<li><a href="#" >信息配置</a></li>
-					</ul>
+				<ul class="lev-2 fund-bank-drop" style="display: none;">
+					<li><a href="#" >基金列表</a></li>
+					<li><a href="#" >统计数据</a></li>
+					<li><a href="#" >信息配置</a></li>
+				</ul>
 			</li>
 			<li>
 				<a href="#" class="fund-survey list-head">基金概况</a>
@@ -126,22 +126,13 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			// 实现下拉列表功能
-			$(".fund-bank").mouseenter(
+			$(".list-head").mouseenter(
 				function () {
-				$('.fund-bank-drop').filter(':not(:animated)').slideDown(150);
+				$(this).next().filter(':not(:animated)').slideDown(150);
 			});
-			$(".fund-bank-drop").mouseleave(			
+			$(".lev-2").mouseleave(			
 				function () {
-				$('.fund-bank-drop').filter(':not(:animated)').slideUp(200);
-			});
-			//基金概况
-			$(".fund-survey").mouseenter(
-				function () {
-				$('.fund-drop-survey').filter(':not(:animated)').slideDown(150);
-			});
-			$(".fund-drop-survey").mouseleave(			
-				function () {
-				$('.fund-drop-survey').filter(':not(:animated)').slideUp(200);
+				$(this).filter(':not(:animated)').slideUp(200);
 			});
 		});
 	</script>
